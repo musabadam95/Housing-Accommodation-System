@@ -1,0 +1,40 @@
+.text-field {
+    
+    
+     -fx-text-fill: white;
+}
+.combo-box .cell:selected {
+    -fx-text-fill: white;
+}
+
+#bankBox .combo-box .cell:selected {
+    -fx-text-fill: black;
+}
+.bigPane{
+
+	-fx-pref-height: 1080;
+	-fx-pref-width: 1920;
+}
+#Backpane{
+	-fx-background-image: url(/Login/lines.jpg);
+	-fx-background-size: stretch;
+	-fx-background-repeat: no-repeat;
+
+}
+#Frontpane{
+	-fx-background-color:  #0f3b68;
+	
+	
+}
+#btn{
+    -fx-background-color: #f4f6f9;
+    
+}
+#label{
+    
+    -fx-text-fill: white;
+}
+.chart-pie-label { /*this is what you need for labels*/
+    -fx-fill: "white";
+    -fx-font-size: 1em;
+} 

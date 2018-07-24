@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="998.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="propertyViewer.addingPropertyController">
+   <children>
+      <AnchorPane id="Frontpane" fx:id="propertyList" layoutX="34.0" layoutY="34.0" prefHeight="499.0" prefWidth="929.0" stylesheets="@../CSS/main.css">
+         <children>
+            <JFXButton id="btn" fx:id="addpropBtn" buttonType="RAISED" layoutX="680.0" layoutY="330.0" onAction="#addNewProperty" prefHeight="127.0" prefWidth="205.0" stylesheets="@../CSS/main.css" text="Add Property">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="#6f14e3" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXDatePicker id="label" fx:id="ContractEndPicker" layoutX="426.0" layoutY="108.0" prefHeight="31.0" prefWidth="143.0" stylesheets="@../CSS/main.css" />
+            <Label id="label" layoutX="306.0" layoutY="113.0" stylesheets="@../CSS/main.css" text="Contract Ends  " />
+            <Label id="label" layoutX="306.0" layoutY="62.0" stylesheets="@../CSS/main.css" text="Contract Started" />
+            <VBox layoutX="28.0" layoutY="56.0" prefHeight="344.0" prefWidth="278.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="55.0" prefWidth="264.0" spacing="10.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="Flat No">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                        <JFXTextField id="label" fx:id="FlatNoTxt" labelFloat="true" prefHeight="31.0" prefWidth="127.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="410.0" spacing="10.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="Door No" />
+                        <JFXTextField id="label" fx:id="DoorNoTxt" prefHeight="31.0" prefWidth="120.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="62.0" prefWidth="278.0" spacing="10.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="First Line" />
+                        <JFXTextField id="label" fx:id="FirstLineTxt" prefWidth="120.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="264.0" spacing="10.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="Post Code" />
+                        <JFXTextField id="label" fx:id="postCodeTxt" prefWidth="120.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="264.0" spacing="25.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="Town  " />
+                        <JFXTextField id="label" fx:id="TownTxt" prefWidth="120.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="264.0" spacing="10.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="Borough" />
+                        <JFXTextField id="label" fx:id="BoroughTxt" prefWidth="120.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="264.0" spacing="10.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="Rate P/Day" />
+                        <JFXTextField id="label" fx:id="RateTxt" prefWidth="120.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="264.0" spacing="10.0">
+                     <children>
+                        <Label id="label" stylesheets="@../CSS/main.css" text="Rent Cost" />
+                        <JFXTextField id="label" fx:id="rentTxt" prefWidth="120.0" stylesheets="@../CSS/main.css" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <JFXDatePicker id="label" fx:id="ContractPicker" layoutX="427.0" layoutY="57.0" prefHeight="31.0" prefWidth="143.0" stylesheets="@../CSS/main.css" />
+            <VBox layoutX="306.0" layoutY="182.0" prefHeight="46.0" prefWidth="255.0" spacing="15.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="200.0">
+                     <children>
+                        <JFXComboBox fx:id="landlordPicker" prefHeight="31.0" prefWidth="245.0" promptText="Select or Type Landlord Name" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="200.0">
+                     <children>
+                        <JFXComboBox fx:id="areaManagerPicker" prefHeight="31.0" prefWidth="245.0" promptText="Select Area Manager" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <JFXButton id="btn" buttonType="RAISED" layoutX="468.0" layoutY="330.0" onAction="#addNewLandlord" prefHeight="127.0" prefWidth="205.0" stylesheets="@../CSS/main.css" text="Add New Landlord">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="#6f14e3" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="Frontpane" layoutX="12.0" layoutY="911.0" prefHeight="160.0" prefWidth="1896.0" style="-fx-background-image: url(/sample/lines.jpg);-fx-background-size: stretch;-fx-background-repeat: no-repeat;" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="911.0" />
+      <JFXNodesList layoutX="1782.0" layoutY="180.0" prefWidth="60.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="772.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tennantViewer.addingTennantController">
+   <children>
+      <AnchorPane id="Frontpane" fx:id="propertyList" layoutX="34.0" layoutY="36.0" prefHeight="352.0" prefWidth="704.0" stylesheets="@../CSS/main.css">
+         <children>
+            <JFXTextField id="label" fx:id="FirstNameTxt" labelFloat="true" layoutX="143.0" layoutY="61.0" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="392.0" AnchorPane.topAnchor="61.0" />
+            <Label id="label" layoutX="33.0" layoutY="61.0" stylesheets="@../CSS/main.css" text="First Name" AnchorPane.leftAnchor="33.0" />
+            <JFXTextField id="label" fx:id="LastNameTxt" layoutX="143.0" layoutY="111.0" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="392.0" AnchorPane.topAnchor="111.0" />
+            <Label id="label" layoutX="33.0" layoutY="111.0" stylesheets="@../CSS/main.css" text="Last Name" AnchorPane.leftAnchor="33.0" />
+            <Label id="label" layoutX="33.0" layoutY="161.0" stylesheets="@../CSS/main.css" text="D.O.B" AnchorPane.leftAnchor="33.0" />
+            <Label id="label" layoutX="33.0" layoutY="211.0" stylesheets="@../CSS/main.css" text="Lives At" AnchorPane.leftAnchor="33.0" />
+            <JFXDatePicker id="label" fx:id="DOBPicker" layoutX="143.0" layoutY="161.0" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="161.0" />
+            <JFXComboBox id="label" fx:id="propList" labelFloat="true" layoutX="143.0" layoutY="211.0" prefHeight="31.0" prefWidth="169.0" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="392.0" AnchorPane.topAnchor="211.0" />
+            <JFXDatePicker id="label" fx:id="MovedInPicker" layoutX="143.0" layoutY="261.0" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="261.0" />
+            <JFXButton id="btn" buttonType="RAISED" layoutX="466.0" layoutY="147.0" onAction="#addNewTennant" prefHeight="127.0" prefWidth="205.0" stylesheets="@../CSS/main.css" text="Add Tennant" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="466.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="147.0">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="#6f14e3" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Label id="label" layoutX="33.0" layoutY="261.0" stylesheets="@../CSS/main.css" text="Date Moved In" AnchorPane.leftAnchor="33.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

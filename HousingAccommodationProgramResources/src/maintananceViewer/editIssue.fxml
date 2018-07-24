@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="998.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maintananceViewer.editIssueController">
+   <children>
+      <AnchorPane id="Frontpane" layoutX="35.0" layoutY="35.0" prefHeight="544.0" prefWidth="929.0" stylesheets="@../CSS/main.css">
+         <children>
+            <VBox layoutX="636.0" layoutY="50.0" prefHeight="186.0" prefWidth="251.0" spacing="20.0">
+               <children>
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Property" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Date Reported" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Priority" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Reported By" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Description" />
+               </children>
+            </VBox>
+            <JFXTreeTableView fx:id="jobTable" layoutX="14.0" layoutY="50.0" prefHeight="475.0" prefWidth="610.0" tableMenuButtonVisible="true" />
+            <VBox layoutX="763.0" layoutY="37.0" prefHeight="248.0" prefWidth="143.0" spacing="10.0">
+               <children>
+                  <JFXComboBox fx:id="propertyList" onAction="#populateTennant" prefHeight="31.0" prefWidth="144.0" promptText="Select property" stylesheets="@../CSS/main.css" />
+                  <JFXDatePicker fx:id="reportedDate" promptText="Select date" stylesheets="@../CSS/main.css" />
+                  <JFXComboBox fx:id="priorityLevel" prefHeight="31.0" prefWidth="155.0" promptText="Select priority" />
+                  <JFXComboBox fx:id="tennantPicker" editable="true" prefHeight="31.0" prefWidth="149.0" promptText="Select" stylesheets="@../CSS/main.css" />
+               </children>
+            </VBox>
+            <JFXTextArea fx:id="descriptionField" layoutX="636.0" layoutY="236.0" prefHeight="122.0" prefWidth="251.0" promptText="Enter Description Here" stylesheets="@../CSS/main.css" />
+            <HBox layoutX="711.0" layoutY="379.0" prefHeight="146.0" prefWidth="176.0" spacing="2.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#editIssue" prefHeight="157.0" prefWidth="236.0" style="-fx-background-color: #dba40d;" text="Update Utility" textAlignment="CENTER" wrapText="true">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

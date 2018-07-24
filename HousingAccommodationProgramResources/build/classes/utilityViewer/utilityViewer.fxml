@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utilityViewer.utilityViewerController">
+   <children>
+      <AnchorPane id="Frontpane" layoutX="12.0" layoutY="911.0" prefHeight="160.0" prefWidth="1896.0" style="-fx-background-image: url(/sample/lines.jpg);-fx-background-size: stretch;-fx-background-repeat: no-repeat;" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="911.0" />
+      <AnchorPane id="Frontpane" layoutX="1362.0" layoutY="499.0" prefHeight="170.0" prefWidth="922.0" rotate="-90.0" style="-fx-background-image: url(/sample/lines.jpg);-fx-background-size: stretch;-fx-background-repeat: no-repeat;" stylesheets="@../CSS/main.css" />
+      <JFXTreeTableView fx:id="treeviewExpense" layoutX="24.0" layoutY="19.0" prefHeight="868.0" prefWidth="1684.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="19.0">
+         <effect>
+            <Blend opacity="0.31" />
+         </effect>
+      </JFXTreeTableView>
+      <JFXButton id="btn" fx:id="ManagePropertyExpenseBtn" buttonType="RAISED" layoutX="1759.0" layoutY="165.0" onAction="#manageUtilitys" prefHeight="31.0" prefWidth="130.0" stylesheets="@../CSS/main.css" text="Manage Utility">
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

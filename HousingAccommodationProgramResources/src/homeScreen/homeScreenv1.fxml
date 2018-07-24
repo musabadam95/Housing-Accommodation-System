@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeScreen.HomeScreenv1Controller">
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="1080.0" prefWidth="1920.0">
+        <JFXMasonryPane id="Backpane" fx:id="masonryPane" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../CSS/main.css">
+            <padding><Insets bottom="16" left="16" right="16" top="16" /></padding>
+         <children>
+            <Label prefHeight="238.0" prefWidth="682.0" style="-fx-background-color: transparent;" stylesheets="@../CSS/main.css" text="Home Screen" textFill="WHITE" underline="true" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="96.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <JFXButton id="btn" buttonType="RAISED" onAction="#enterTenantViewer" pickOnBounds="false" prefHeight="194.0" prefWidth="282.0" stylesheets="@../CSS/main.css" text="View Tenants " wrapText="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#900d0d" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btn" buttonType="RAISED" onAction="#enterropertyViewer" prefHeight="194.0" prefWidth="282.0" stylesheets="@../CSS/main.css" text="View Properties" wrapText="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#900d0d" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btn" buttonType="RAISED" onAction="#enterExpenseViewer" prefHeight="194.0" prefWidth="282.0" stylesheets="@../CSS/main.css" text="View Expenses" wrapText="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#900d0d" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btn" buttonType="RAISED" onAction="#enterUtilityViewer" prefHeight="194.0" prefWidth="282.0" stylesheets="@../CSS/main.css" text="View Utilities" wrapText="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#900d0d" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btn" buttonType="RAISED" onAction="#enterFinanceViewer" prefHeight="194.0" prefWidth="282.0" stylesheets="@../CSS/main.css" text="View Finance" wrapText="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#900d0d" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btn" buttonType="RAISED" onAction="#enterMaintananceViewer" prefHeight="194.0" prefWidth="282.0" stylesheets="@../CSS/main.css" text="View Maintenance" wrapText="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#900d0d" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="43.5" />
+               </font>
+            </JFXButton>
+         </children>
+        </JFXMasonryPane>
+    </ScrollPane>
+</StackPane>

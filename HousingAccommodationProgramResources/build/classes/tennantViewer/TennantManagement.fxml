@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tennantViewer.TennantManagementController">
+   <children>
+      <AnchorPane id="Frontpane" layoutX="12.0" layoutY="911.0" prefHeight="160.0" prefWidth="1896.0" style="-fx-background-image: url(/sample/lines.jpg);-fx-background-size: stretch;-fx-background-repeat: no-repeat;" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="911.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="69.0" layoutY="30.0" prefHeight="100.0" prefWidth="1609.0" spacing="25.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="January" />
+                        <Label id="label" fx:id="month1" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="February" />
+                        <Label id="label" fx:id="month2" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="March" />
+                        <Label id="label" fx:id="month3" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="April" />
+                        <Label id="label" fx:id="month4" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="May" />
+                        <Label id="label" fx:id="month5" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="June" />
+                        <Label id="label" fx:id="month6" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="July" />
+                        <Label id="label" fx:id="month7" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="August" />
+                        <Label id="label" fx:id="month8" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="September" />
+                        <Label id="label" fx:id="month9" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="October" />
+                        <Label id="label" fx:id="month10" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="November" />
+                        <Label id="label" fx:id="month11" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label id="label" text="December" />
+                        <Label id="label" fx:id="month12" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+      <AnchorPane id="Frontpane" layoutX="1362.0" layoutY="499.0" prefHeight="170.0" prefWidth="922.0" rotate="-90.0" style="-fx-background-image: url(/sample/lines.jpg);-fx-background-size: stretch;-fx-background-repeat: no-repeat;" stylesheets="@../CSS/main.css" />
+      <JFXTreeTableView fx:id="treeview" layoutX="24.0" layoutY="19.0" onMouseClicked="#calculateDays" prefHeight="868.0" prefWidth="1684.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="19.0">
+         <effect>
+            <Blend opacity="0.31" />
+         </effect></JFXTreeTableView>
+      <JFXNodesList layoutX="1782.0" layoutY="180.0" prefWidth="60.0" />
+      <JFXButton id="btn" fx:id="addTennantBtn" buttonType="RAISED" layoutX="1759.0" layoutY="245.0" onAction="#addNewTennant" prefHeight="31.0" prefWidth="130.0" stylesheets="@../CSS/main.css" text="Add Tennant">
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill></JFXButton>
+      <JFXButton id="btn" fx:id="importCSV" buttonType="RAISED" layoutX="1756.0" layoutY="325.0" onAction="#importTennants" stylesheets="@../CSS/main.css" text="Import Tennants">
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill></JFXButton>
+      <JFXButton id="btn" fx:id="delTennantBtn" buttonType="RAISED" layoutX="1756.0" layoutY="405.0" onAction="#deleteTennant" prefHeight="31.0" prefWidth="130.0" stylesheets="@../CSS/main.css" text="Delete Tennant" />
+      <JFXButton id="btn" fx:id="TennantLeaveBtn" buttonType="RAISED" layoutX="1756.0" layoutY="485.0" onAction="#removeTennant" prefHeight="31.0" prefWidth="130.0" stylesheets="@../CSS/main.css" text="Remove Tennant" />
+      <JFXComboBox fx:id="getYear" labelFloat="true" layoutX="1768.0" layoutY="165.0" onAction="#clearSelection" prefHeight="31.0" prefWidth="130.0" promptText="Select Year" styleClass="combo-box" stylesheets="@../CSS/main.css" />
+      <JFXButton id="btn" fx:id="RelocateBtn" buttonType="RAISED" layoutX="1756.0" layoutY="565.0" onAction="#relocateTennants" prefHeight="31.0" prefWidth="130.0" stylesheets="@../CSS/main.css" text="Relocate" />
+   </children>
+</AnchorPane>

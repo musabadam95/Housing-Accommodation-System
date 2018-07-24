@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="998.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expenseViewer.manageExpenseController">
+   <children>
+      <AnchorPane id="Frontpane" layoutX="35.0" layoutY="35.0" prefHeight="499.0" prefWidth="929.0" stylesheets="@../CSS/main.css">
+         <children>
+            <VBox layoutX="636.0" layoutY="50.0" prefHeight="186.0" prefWidth="251.0" spacing="20.0">
+               <children>
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Expense Name" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Cost" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Quantity" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Total" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Catergory" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Property" />
+               </children>
+            </VBox>
+            <JFXTreeTableView fx:id="expenseTable" layoutX="14.0" layoutY="50.0" prefHeight="400.0" prefWidth="579.0" />
+            <VBox layoutX="763.0" layoutY="37.0" prefHeight="213.0" prefWidth="143.0" spacing="10.0">
+               <children>
+                  <JFXTextField fx:id="expenseNameTxt" stylesheets="@../CSS/main.css" />
+                  <JFXTextField fx:id="costTxt" onKeyReleased="#generateTotal" stylesheets="@../CSS/main.css" />
+                  <JFXTextField fx:id="quantityTxt" onKeyReleased="#generateTotal" stylesheets="@../CSS/main.css" />
+                  <JFXTextField fx:id="totalTxt" editable="false" stylesheets="@../CSS/main.css" />
+                  <JFXComboBox fx:id="categoryPicker" editable="true" prefHeight="31.0" prefWidth="149.0" promptText="Select/add" stylesheets="@../CSS/main.css" />
+                  <JFXComboBox fx:id="propertyPicker" prefHeight="38.0" prefWidth="143.0" promptText="Select/add" stylesheets="@../CSS/main.css" />
+               </children>
+            </VBox>
+            <HBox layoutX="638.0" layoutY="357.0" prefHeight="59.0" prefWidth="251.0" spacing="2.0">
+               <children>
+                  <JFXButton fx:id="addBtn" buttonType="RAISED" onAction="#addNewPayment" prefHeight="58.0" prefWidth="86.0" style="-fx-background-color: green;" text="Add Expense" textAlignment="CENTER" wrapText="true">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton fx:id="delBtn" buttonType="RAISED" onAction="#deleteItem" prefHeight="58.0" prefWidth="86.0" style="-fx-background-color: red;" text="Delete Expense" textAlignment="CENTER" wrapText="true">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXDatePicker fx:id="datePaidPicker" defaultColor="#009485" layoutX="636.0" layoutY="294.0" prefHeight="31.0" prefWidth="251.0" promptText="Date Paid" stylesheets="@../CSS/main.css" />
+            <HBox layoutX="638.0" layoutY="418.0" prefHeight="59.0" prefWidth="251.0" spacing="2.0">
+               <children>
+                  <JFXButton fx:id="editBtn" buttonType="RAISED" onAction="#getValuesforEditing" prefHeight="58.0" prefWidth="86.0" style="-fx-background-color: orange;" text="Edit Expense" textAlignment="CENTER" wrapText="true">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton fx:id="updateBtn" buttonType="RAISED" onAction="#editItems" prefHeight="58.0" prefWidth="86.0" style="-fx-background-color: #dba40d;" text="Update Expense" textAlignment="CENTER" wrapText="true">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

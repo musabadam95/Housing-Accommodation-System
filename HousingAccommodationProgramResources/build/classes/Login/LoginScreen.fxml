@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.loginController">
+   <children>
+      <AnchorPane fx:id="backgroundPane" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <AnchorPane fx:id="frontPane" layoutX="955.0" prefHeight="1080.0" prefWidth="960.0" style="-fx-text-fill: white;" stylesheets="@../CSS/main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+            <effect>
+               <InnerShadow blurType="GAUSSIAN" color="#00000096" radius="29.2725" width="98.09" />
+            </effect>
+            <children>
+               <Label layoutX="244.0" layoutY="286.0" text="Name" textFill="#1b9ec8" AnchorPane.leftAnchor="244.0" AnchorPane.rightAnchor="562.0" AnchorPane.topAnchor="286.0">
+                  <font>
+                     <Font name="Roboto Medium" size="58.0" />
+                  </font>
+               </Label>
+               <Label layoutX="244.0" layoutY="530.0" text="Password" textFill="#1b9ec8" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="530.0">
+                  <font>
+                     <Font name="Roboto Medium" size="55.0" />
+                  </font>
+               </Label>
+               <JFXTextField fx:id="logUser" labelFloat="true" layoutX="248.0" layoutY="347.0" prefHeight="85.0" prefWidth="267.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="347.0">
+                  <font>
+                     <Font name="Roboto Condensed Light" size="43.0" />
+                  </font>
+                  <effect>
+                     <Reflection bottomOpacity="0.79" fraction="1.0" topOffset="-10.0" topOpacity="0.0" />
+                  </effect>
+               </JFXTextField>
+               <JFXButton fx:id="loginBtn" buttonType="RAISED" layoutX="619.0" layoutY="744.0" onAction="#login" prefHeight="101.0" prefWidth="254.0" style="-fx-background-color: #1b9ec8;" text="Login">
+                  <ripplerFill>
+                     <RadialGradient centerX="0.5" centerY="0.5" focusAngle="-6.34" radius="0.5">
+                        <stops>
+                           <Stop color="#00b7ff" />
+                           <Stop color="#0c1372" offset="1.0" />
+                        </stops>
+                     </RadialGradient>
+                  </ripplerFill>
+                  <font>
+                     <Font name="Roboto Black" size="47.0" />
+                  </font>
+                  <effect>
+                     <DropShadow spread="0.05" />
+                  </effect>
+               </JFXButton>
+               <JFXPasswordField fx:id="logPassword" labelFloat="true" layoutX="248.0" layoutY="611.0" prefHeight="94.0" prefWidth="267.0" style="-fx-text-fill: white;">
+                  <font>
+                     <Font size="43.0" />
+                  </font>
+               </JFXPasswordField>
+            </children>
+         </AnchorPane>
+      </AnchorPane>
+   </children>
+</AnchorPane>

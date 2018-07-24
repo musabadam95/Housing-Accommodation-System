@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="998.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="propertyViewer.RentPayingv2Controller">
+   <children>
+      <AnchorPane id="Frontpane" layoutX="35.0" layoutY="35.0" prefHeight="499.0" prefWidth="929.0" stylesheets="@../CSS/main.css">
+         <children>
+            <VBox layoutX="665.0" layoutY="50.0" prefHeight="127.0" prefWidth="222.0" spacing="20.0">
+               <children>
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Rent Due" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Deduction" />
+                  <Label id="label" stylesheets="@../CSS/main.css" text="Total Pay" />
+               </children>
+            </VBox>
+            <JFXTreeTableView fx:id="rentTable" layoutX="14.0" layoutY="50.0" prefHeight="400.0" prefWidth="579.0" />
+            <VBox layoutX="763.0" layoutY="37.0" prefHeight="127.0" prefWidth="109.0" spacing="10.0">
+               <children>
+                  <JFXTextField fx:id="rentDueTxt" editable="false" />
+                  <JFXTextField fx:id="deductionTxt" onKeyReleased="#changeRentDue" />
+                  <JFXTextField fx:id="totalPayTxt" editable="false" />
+               </children>
+            </VBox>
+            <JFXDatePicker fx:id="datePayedPicker" layoutX="668.0" layoutY="177.0" />
+            <Label fx:id="alertRent" layoutX="447.0" layoutY="14.0" textFill="RED" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXButton id="btn" fx:id="payBtn" buttonType="RAISED" layoutX="668.0" layoutY="323.0" onAction="#addNewPayment" prefHeight="127.0" prefWidth="175.0" stylesheets="@../CSS/main.css" text="Pay Rent">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5056818181818182" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                     <stops>
+                        <Stop color="#ab329b" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

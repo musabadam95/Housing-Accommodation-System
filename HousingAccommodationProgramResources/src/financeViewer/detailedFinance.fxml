@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Backpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="998.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financeViewer.detailedFinanceController">
+   <children>
+      <AnchorPane id="Frontpane" layoutX="35.0" layoutY="35.0" prefHeight="499.0" prefWidth="929.0" stylesheets="@../CSS/main.css">
+         <children>
+            <Label fx:id="propertyName" layoutX="351.0" layoutY="14.0" prefHeight="30.0" prefWidth="227.0" textFill="RED" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="pie" layoutY="20.0" prefHeight="479.0" prefWidth="539.0" />
+            <JFXComboBox fx:id="monthPicker" layoutX="540.0" layoutY="79.0" onAction="#updatePieChart" prefHeight="31.0" prefWidth="153.0" promptText="Month" stylesheets="@../CSS/main.css" />
+            <JFXComboBox fx:id="yearPicker" layoutX="717.0" layoutY="79.0" onAction="#updatePieChart" prefHeight="31.0" prefWidth="153.0" promptText="Year" stylesheets="@../CSS/main.css" />
+            <Label id="label" layoutX="539.0" layoutY="44.0" stylesheets="@../CSS/main.css" text="Select Date">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXTreeTableView fx:id="expenseTable" layoutX="540.0" layoutY="110.0" prefHeight="385.0" prefWidth="384.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
