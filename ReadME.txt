@@ -1,4 +1,3 @@
-# Housing Accommodation System
 To access the Desktop Application
  1.Go into the folder called HousingAccommodationProgramResources
  2.Click on HousingAccommodation.jar
