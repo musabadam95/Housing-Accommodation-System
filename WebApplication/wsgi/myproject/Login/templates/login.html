@@ -1,0 +1,49 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+	{% block head %}
+	<script src="{% static '/index/login.js' %}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
+	<title>Login Page</title>
+	{% endblock %}
+
+</head>
+
+
+<body>
+
+	{% block content %}
+	<div class="alert">
+
+	</div>
+	<div class="form-wrap" >
+		<h2>Login</h2>
+		<form class="login" ng-app="app" name="myForm" ng-controller="Validate" novalidate>
+			{% csrf_token %}
+				<i class="fas fa-user-circle fa-pull-left" ></i><i> User Name<i>
+				<input id="logID" type="text" placeholder="Email Address" name="Username" ng-model="Username" required><br>
+				<i class="fas fa-lock"></i><i> Password<i>
+				<input id="logPass" type="password" placeholder="Password" name="Password" ng-model="Password" required><br>
+			<input type="submit" value="Login" ng-disabled="myForm.Username.$dirty && myForm.Username.$invalid ||  myForm.Username.$pristine && myForm.Username.$invalid || 
+			myForm.Password.$dirty && myForm.Password.$invalid || myForm.Password.$pristine && myForm.Password.$invalid">
+		</form>
+
+
+
+
+		<script>
+			var app = angular.module('app', []);
+			app.controller('Validate', function($scope) {
+				$scope.Username="";
+				$scope.Password ="";
+			});
+		</script>
+	</div>
+	{% endblock %}
+
+</body>
+</html>

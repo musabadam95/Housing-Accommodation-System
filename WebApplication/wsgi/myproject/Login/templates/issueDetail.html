@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	{% block head %}
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="{% static '/articleAndcomment/articleAndcomment.js' %}"></script>
+	<Meta charset="UTF-8">
+	<title>News Website</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/index/styles.css' %}" />
+	{% endblock %}
+</head>
+
+
+
+
+{% block content %}
+
+
+	<article id="art">
+<div class="content">
+
+	<h2 style="color: black"> 
+			Current Status: {{ articleTitle.status }}
+			</h2>
+
+		
+
+
+
+<h1 style="color: black"> Status Logs </h1>
+<ol>
+	<li><p style="color: black"> Issue Reported : {{articleTitle.date}}</p></li>
+{% if initated %}
+<li><p style="color: black"> Builder {{builder.firstname}} {{builder.lastname}} Dispatched On: {{ initated.jobstarted }}</p></li>
+
+				{% if articleTitle.status == "Complete" %}
+
+			<li>	<p style="color: black">Issue has been RESOLVED :{{ initated.jobcompleted }} </p></li>
+
+				{%else%}
+
+				{%endif%}
+				{%endif%}	
+			</ol>
+				<br>
+
+
+<h1 style="color: black"> Issue Details </h1>
+		<h3 style="color: black"> Property:</h3>
+		<h3>
+			{{property.doorno}}<p> </p> {{property.flatno}}
+			
+			{{property.firstline}}
+			<br>
+{{property.town}} {{property.borough}}
+		<br>
+{{property.postcode}}
+	</h3>
+
+<h3>
+	Issue:	{{ articleTitle.description }}
+</h3>
+<br>
+	<h2 style="color: black">Current Comments made:</h2> 
+<h3>
+		{{ initated.comments }}
+</h3>
+	<style>
+
+	#contentDes{
+
+		color: black;
+	}
+
+</style>
+</article>
+	{% endblock %}
+		</html>
+

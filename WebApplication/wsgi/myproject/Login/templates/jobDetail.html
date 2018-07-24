@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	{% block head %}
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="{% static '/articleAndcomment/articleAndcomment.js' %}"></script>
+	<Meta charset="UTF-8">
+	<title>News Website</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/index/styles.css' %}" />
+	{% endblock %}
+</head>
+
+
+
+
+{% block content %}
+{% for initated in initated %}
+{% for Jobs in articleTitle %}
+	<article id="art">
+<div class="content">
+
+		<h1 style="color: black"> 
+				Date Reported: {{ Jobs.date }}
+				<br>
+
+				Date Started:{{ initated.jobstarted }}
+				</h1>	
+				<br>
+				
+		<h1 style="color: black"> 
+			Property: <br>
+			{{property.doorno}}<p> </p> {{property.flatno}} <p> </p>{{property.firstline}}
+			<br>
+{{property.town}} {{property.borough}}
+		<br>
+{{property.postcode}}
+	</h1>
+<p> </p>
+<br>
+
+<h3>
+		{{ Jobs.description }}
+</h3>
+<br>
+
+<h3>
+	Job Comments: 
+		{{ initated.comments }}
+</h3>
+	<style>
+
+	#contentDes{
+
+		color: black;
+	}
+
+	.delete:hover {
+		background-color: #f44336;
+		color: white;
+	}
+</style>
+
+<section>
+				<div class ="s">
+					<ul>
+	
+			
+						{% csrf_token %}
+
+						<textarea id="commentBox"  form= "commentform" cols="20"  placeholder="Enter your comments here"></textarea>
+						<form class="comment" name="commentform">
+							<input id="sub" name="completeBtn" type="submit" value="Job Complete" style="color: green">
+							<input id="sub" name="incompleteBtn" type="submit" value="Incomplete" style="color: red">
+
+</form>
+
+	</ul>
+</div>
+
+</section>
+</article>
+
+	{% endfor %}
+
+
+	{% endfor %}
+
+
+	{% endblock %}
+
+
+
+
+		</html>
+

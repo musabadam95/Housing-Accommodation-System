@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	{% block head %}
+	<script src="{% static '/reportIssue/reportIssue.js' %}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<title>Register Page</title>
+	{% endblock %}
+</head>
+<body>
+{% block content %}
+		<div class="alert">
+
+	</div>
+	<div class="form-wrap">
+		<h2>Report Issue</h2>
+
+		<h4 style="text-align: center">{{userProperty.doorno}}{{userProperty.flatno}} {{userProperty.firstline}}, {{userProperty.postcode}}<h4>
+
+		<form class="registerform" ng-app="app" name="registerform" ng-controller="Validate" novalidate>
+			{% csrf_token %}
+
+<textarea id="commentBox"  form= "registerform" cols="20"  placeholder="Enter your issue here" name="report" ng-model="report" required></textarea>
+
+
+
+			<input type="submit" value="Submit Issue"
+				   ng-disabled="registerform.report.$dirty && registerform.report.$invalid
+			||
+			registerform.report.$pristine && registerform.report.$invalid">
+		</form>
+		<script>
+			var app = angular.module('app', []);
+			app.controller('Validate', function($scope) {
+				$scope.report="";
+
+			});
+		</script>
+	</div>
+	{% endblock %}
+
+</body>
+</html>
