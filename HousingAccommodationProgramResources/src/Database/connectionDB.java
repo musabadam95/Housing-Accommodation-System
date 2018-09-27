@@ -14,7 +14,7 @@ public class connectionDB {
       try {
       String dbName = "housingdatabase";
       String userName = "musab";
-      String password = "Eliter543";
+      String password = "";//enter password here
       String hostname = "project.cq0qm9sc13w5.eu-west-2.rds.amazonaws.com";
       String port = "3306";
       String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName + "&password=" + password+"&?autoReconnect=true&useSSL=false";
